@@ -6,12 +6,15 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
+import { testMe } from '../composables/test.js'
 
 export default defineComponent({
   name: 'HelloWorld',
   setup() {
     const msg = ref('Hello World')
 
+    msg.value = testMe()
+    
     return { msg }
   }
 });
