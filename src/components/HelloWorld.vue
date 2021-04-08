@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import { testMe } from '../composables/test.js'
+import { testMe } from '@/composables/test'
 
 export default defineComponent({
   name: 'HelloWorld',
@@ -14,7 +14,7 @@ export default defineComponent({
     const msg = ref('Hello World')
 
     msg.value = testMe()
-    
+
     return { msg }
   }
 });
